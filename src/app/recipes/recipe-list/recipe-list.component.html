@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-12">
+
+        <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="clo-xs-md-12">
+        <!--Here we are gonging to get and loop the data thats comes from recipe item. By bindig it with data data comes from item-->
+        <!--recipeElem is the Item that we are passig to the bidng varible recipe in list componet-->
+        <!--onRecipeSelected we will pass values to upper componet recipe componete and pass the recipe selected-->
+        <!--<app-recipe-item *ngFor="let recipeElem of recipes" [recipe]="recipeElem" (recipeSelected)="onRecipeSelected(recipeElem)"></app-recipe-item>-->
+        <app-recipe-item *ngFor="let recipeElem of recipes; let i = index" [recipe]="recipeElem" [index]="i"></app-recipe-item>
+    </div>
+</div>
